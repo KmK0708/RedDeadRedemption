@@ -50,6 +50,8 @@ public:
 	void DamageState();
 	// 사망 상태
 	void DeadState();
+	// 도망 상태
+	void FleeState();
 
 	// 대기 시간
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "FSM")
@@ -67,7 +69,7 @@ public:
 
 	// 공격 범위
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "FSM")
-		float AttackRange = 400.0f;
+		float AttackRange = 1000.0f;
 
 	// 공격 딜레이
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "FSM")
@@ -119,7 +121,8 @@ public:
 	// 체력을 표현 하고싶다.
 	int32 EnemyHealth;
 	int32 EnemyMaxHealth = 50;
-
+	// 공격횟수
+	int32 EnemyAttackCount = 0;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsCanPlayerShoot = false;
 

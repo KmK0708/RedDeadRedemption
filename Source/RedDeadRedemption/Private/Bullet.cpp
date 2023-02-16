@@ -34,8 +34,8 @@ ABullet::ABullet()
 
 	movementComp = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("movementComp"));
 	movementComp->SetUpdatedComponent(sphereComp);
-	movementComp->InitialSpeed = 1000.0f;
-	movementComp->MaxSpeed = 1000.0f;
+	movementComp->InitialSpeed = 2000.0f;
+	movementComp->MaxSpeed = 2000.0f;
 	movementComp->ProjectileGravityScale = 0.2f;
 }
 
